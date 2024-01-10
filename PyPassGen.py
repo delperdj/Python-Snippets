@@ -10,15 +10,15 @@ numbers = [str(i) for i in range(10)]
 symbols = ['!', '#', '$', '&', '(', ')', '*', '+']
 
 # function for random generation
-def generate_password(number_lowerLetters, number_upperLetters, number_numbers, number_symbols):
+def generate_password(number_lower_letters, number_upper_letters, number_numbers, number_symbols) :
     password_list = []
 
     # pick the random lower case letters
-    for _ in range(number_lowerLetters):
+    for _ in range(number_lower_letters) :
         password_list.append(random.choice(lowerLetters))
 
     # pick the random upper case letters
-    for _ in range(number_upperLetters):
+    for _ in range(number_upper_letters) :
         password_list.append(random.choice(upperLetters))
 
     # pick the random numbers
