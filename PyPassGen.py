@@ -10,15 +10,15 @@ numbers = [str(i) for i in range(10)]
 symbols = ['!', '#', '$', '&', '(', ')', '*', '+']
 
 # function for random generation
-def generate_password(number_lower_letters, number_upper_letters, number_numbers, number_symbols) :
+def generate_password(number_lower_letters, number_upper_letters, number_numbers, number_symbols):
     password_list = []
 
     # pick the random lower case letters
-    for _ in range(number_lower_letters) :
+    for _ in range(number_lower_letters):
         password_list.append(random.choice(lowerLetters))
 
     # pick the random upper case letters
-    for _ in range(number_upper_letters) :
+    for _ in range(number_upper_letters):
         password_list.append(random.choice(upperLetters))
 
     # pick the random numbers
@@ -32,7 +32,7 @@ def generate_password(number_lower_letters, number_upper_letters, number_numbers
     # shuffle and return password
     random.shuffle(password_list)
     your_password = ""
-    return(your_password.join(password_list)
+    return(your_password.join(password_list))
 
 def main(): 
     print("\nWe1come to the PyPassword Generator!")
@@ -43,7 +43,7 @@ def main():
         num_upper_letters = int(sys.argv[2])
         num_numbers = int(sys.argv[3])
         num_symbols = int(sys.argv[4])
-    else
+    else:
         # ask for input for random generation 
         num_lower_letters= int (input ("How many lower case letters would you like in your password?\n"))
         num_upper_letters= int (input ("How many upper case letters would you like in your password?\n"))

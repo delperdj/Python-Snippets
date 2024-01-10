@@ -35,7 +35,7 @@ def main():
     print("\nWelcome to the PyClipboard History!")
 
     history = ClipboardHistory()
-    print('\x1b[43m' + "Monitoring clipboard... Press Ctrl+C to stop and show history." + '\x1b[0m')
+    print('\x1b[11;30;42m' + "Monitoring clipboard... Press Ctrl+C to stop and show history." + '\x1b[0m')
 
     start_time = time.time()
     # keep track of time of program
@@ -48,7 +48,6 @@ def main():
     except KeyboardInterrupt:
         pass
 
-    print("\n")
     if len(sys.argv) > 1:
         # store command line arugment that is provided
         count = int(sys.argv[1])
