@@ -1,7 +1,8 @@
+"""Password Generator."""
 # JDD 11/2023
-# Password Generator
 
-import random, sys
+import random
+import sys
 
 # define use cases to generate random password
 lowerLetters = [chr(i) for i in range(97, 123)]
@@ -9,8 +10,8 @@ upperLetters = [chr(i) for i in range(65, 91)]
 numbers = [str(i) for i in range(10)]
 symbols = ['!', '#', '$', '&', '(', ')', '*', '+']
 
-# function for random generation
 def generate_password(number_lower_letters, number_upper_letters, number_numbers, number_symbols):
+    """function for the 'RNG'."""
     password_list = []
 
     # pick the random lower case letters
@@ -32,35 +33,42 @@ def generate_password(number_lower_letters, number_upper_letters, number_numbers
     # shuffle and return password
     random.shuffle(password_list)
     your_password = ""
-    return(your_password.join(password_list))
+    return your_password.join(password_list)
 
-def main(): 
-    print("\nWe1come to the PyPassword Generator!")
-    
+def main():
+    """main is the Main."""
+    print("\nWelcome to the PyPassword Generator!")
+
     if len(sys.argv) > 4:
-        # if command line aruguments exist, it will execute this 
+        # if command line aruguments exist, it will execute this
         num_lower_letters = int(sys.argv[1])
         num_upper_letters = int(sys.argv[2])
         num_numbers = int(sys.argv[3])
         num_symbols = int(sys.argv[4])
     else:
-        # ask for input for random generation 
-        num_lower_letters= int (input ("How many lower case letters would you like in your password?\n"))
-        num_upper_letters= int (input ("How many upper case letters would you like in your password?\n"))
+        # ask for input for random generation
+        num_lower_letters= int (input (
+            "\nHow many lower case letters would you like in your password?\n"))
+        num_upper_letters= int (input (
+            "How many upper case letters would you like in your password?\n"))
         num_numbers = int (input ("How many numbers would you like?\n"))
         num_symbols = int (input ("How many symbols would you like?\n"))
 
     # pass input to function for password generation
-    random_password = generate_password(num_lower_letters, num_upper_letters, num_numbers, num_symbols)
+    random_password = generate_password(
+        num_lower_letters,
+        num_upper_letters,
+        num_numbers,
+        num_symbols)
     # show returned random generated password from function
-    print("\nGenerated random password is:")
-    # can switch between formatted password or nonformatted password to display 
+    print("\n\x1b[31mRandom generated password is:\x1b[0m")
+    # can switch between formatted password or nonformatted password to display
     # print(random_password)
-    print('\x1b[11;30;42m' + random_password + '\x1b[0m')
+    print('\x1b[11;30;42m' + random_password + '\x1b[0m''\n')
 
 # main
- 
+
 if __name__ == "__main__":
     main()
 
-# end 
+# end

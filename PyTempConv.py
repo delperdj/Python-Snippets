@@ -1,10 +1,10 @@
+"""Temperature Conversion."""
 # JDD 11/2023
-# Temperature Conversion
 
 import sys
 
-# function for temperature conversion
 def convert_temperature(temp):
+    """function for temperature conversion."""
     # extract the numerical part of the temperature and convert it to an integer
     degree = int(temp[:-1])
     # extract the convention part of the temperature input (either 'C/c' or 'F/f')
@@ -21,15 +21,18 @@ def convert_temperature(temp):
         result = int(round((degree - 32) * 5 / 9))
         o_convention = "Celsius" # set the output convention as Celsius
     else:
-        # if the input convention is neither 'C/c' nor 'F/f', print an error message and exit the program
-        print("Input proper convention. Did you specify 'F' or 'C' at the end of the temperature during input?")
+        # if the input convention is neither 'C/c' nor 'F/f',
+        # print an error message and exit the program
+        print("Input proper convention. ")
+        print("Did you specify 'F' or 'C' at the end of the temperature during input?")
         return None
 
     return result, o_convention
 
 def main():
+    """main is the Main."""
     print("\nWelcome to the PyTemperature Conversion!")
-    
+
     if len(sys.argv) > 1:
         # store command line argument that is provided
         temp = sys.argv[1]
@@ -42,7 +45,9 @@ def main():
         # display the converted temperature in the specified output convention
         # can switch between formatted password or nonformatted password to display
         # print("\nThe temperature is:", result[0], "degrees", result[1])
-        print("\nThe temperature is:", '\x1b[11;30;42m' + str(result[0]) + " degrees " + result[1] + '\x1b[0m')
+        result_string = f"{result[0]} degrees {result[1]}"
+        print(f"\n\x1b[31mThe temperature is: \x1b[11;30;42m{result_string}\x1b[0m\n")
+
 
 # main
 
