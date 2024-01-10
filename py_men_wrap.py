@@ -16,11 +16,11 @@ def main():
     print("\n Welcome to 'Ease of Access' Python programs!")
 
     programs = {
-        "1": ("Password Generator", "PyPassGen"),
-        "2": ("Temperature Conversion", "PyTempConv"),
-        "3": ("Clipboard History", "PyClipHist"),
-        "4": ("Currency Conversion", "PyCurrConv"),
-        "5": ("Time Zone Conversion", "PyTimeZone")
+        "1": ("Password Generator", "py_pass_gen"),
+        "2": ("Temperature Conversion", "py_temp_conv"),
+        "3": ("Clipboard History", "py_clip_hist"),
+        "4": ("Currency Conversion", "py_curr_conv"),
+        "5": ("Time Zone Conversion", "py_time_zone")
     }
 
     while True:
