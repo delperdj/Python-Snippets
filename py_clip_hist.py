@@ -65,7 +65,7 @@ def main():
     items = history.get_history(count)
     print(f"\nHistory of the last {count} copies ie. Ctrl+V:")
     for idx, item in enumerate(items, 1):
-        print(f"{idx}: {item}")
+        print(f"\x1b[34m{idx}: {item}\x1b[0m")
 print("\n")
 
 if __name__ == "__main__":
