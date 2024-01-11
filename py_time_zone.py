@@ -25,18 +25,18 @@ def main():
 
     if len(sys.argv) > 3:
         #store command line argument that is provided
-        original_time = sys.argv[1]		# formate "YYYY-MM-DD HH:MM:SS"
+        original_time = sys.argv[1]		# format "YYYY-MM-DD HH:MM:SS"
         from_time_zone = sys.argv[2]	# e.g., "US/Eastern"
         to_time_zone = sys.argv[3]		# e.g., "Asia/Tokyo"
     else:
         # prompt the user to input in the format(e.g., YYYY-MM-DD HH:MM:SS)
         # prompt the user to input time zones to convert
-        original_time = input("\nEnter the original time (YYYY-MM-DD HH:MM:SS): ")
-        print("\nPlease use the IANA time zone formate. "
-              "Use the TZ identifier for the time zone input.\n")
+        original_time = input("Enter the original time (YYYY-MM-DD HH:MM:SS): ")
+        print("\nPlease use the IANA time zone format. "
+              "Use the TZ identifier for the time zone input.")
         from_time_zone = input("Enter the source time zone (e.g., US/Eastern): ")
-        print("\nPlease use the IANA time zone formate. "
-              "Use the TZ identifier for the time zone input.\n")
+        print("\nPlease use the IANA time zone format. "
+              "Use the TZ identifier for the time zone input.")
         to_time_zone = input("Enter the target time zone (e.g., Asia/Tokyo): ")
 
 	#retrieve the conversion result and format it for output

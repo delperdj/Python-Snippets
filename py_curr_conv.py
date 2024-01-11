@@ -14,11 +14,12 @@ def display_timer(stop_event):
         hours, remainder = divmod(elapsed_time, 3600)
         minutes, seconds = divmod(remainder, 60)
         formatted_time = (
-            f"\r\x1b[11;30;42m Waiting for response... "
-            f"{int(hours):02}:{int(minutes):02}:{int(seconds):02}"
-            "\x1b[0m"
+            f"\rWaiting for response... {int(hours):02}:"
+            f"{int(minutes):02}:{int(seconds):02}"
         )
+
         print(formatted_time, end="")
+        print("\n")
         time.sleep(0.5)
 
 def convert_currency(amount, from_currency, to_currency, api_key):
@@ -84,7 +85,10 @@ def main():
     converted_amount = convert_currency(amount, from_currency, to_currency, api_key)
     if converted_amount is not None:
         # show returned converated amount from function
-        print(f"\r{amount} {from_currency} is equal to {converted_amount:.2f} {to_currency}")
+        print(
+            f"\r\x1b[42;30m{amount:.2f}\x1b[0m\x1b[31m{from_currency} is equal to "
+            f"\x1b[42;30m{converted_amount:.2f}\x1b[0m\x1b[31m{to_currency}\x1b[0m"
+        )
     else:
         print("\rConversion failed. Please check your input currencies.")
 
