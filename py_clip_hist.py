@@ -63,10 +63,10 @@ def main():
         count = int(input("\nHow many recent clipboard items do you want to retrieve? \n"))
 
     items = history.get_history(count)
-    print(f"\nHistory of the last {count} copies ie. Ctrl+V:\n")
+    print(f"\nHistory of the last {count} copies ie. Ctrl+V:")
     for idx, item in enumerate(items, 1):
         print(f"{idx}: {item}")
-    print("\n******END******\n")
+print("\n******END******\n")
 
 if __name__ == "__main__":
     main()
