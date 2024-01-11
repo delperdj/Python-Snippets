@@ -66,7 +66,7 @@ def main():
     print(f"\nHistory of the last {count} copies ie. Ctrl+V:")
     for idx, item in enumerate(items, 1):
         print(f"{idx}: {item}")
-print("\n******END******\n")
+print("\n")
 
 if __name__ == "__main__":
     main()
