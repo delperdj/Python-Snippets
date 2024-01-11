@@ -47,7 +47,7 @@ def main():
         while True:
             history.update_history()
             elapsed_time = time.time() - start_time
-            print(f'\x1b[11;30;31m'"Running for {format_time(elapsed_time)}"'\x1b[0m', end="\r")
+            print(f'\x1b[11;30;31mRunning for {format_time(elapsed_time)}\x1b[0m', end="\r")
             time.sleep(0.5)
     except KeyboardInterrupt:
         pass
