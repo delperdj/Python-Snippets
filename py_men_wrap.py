@@ -29,11 +29,11 @@ def main():
             print(f"{key}. {display_name}")
         print("0. Exit")
         print("\nCommand line arguments cheat sheet:")
-        print("Password		- 4: lowercase amount; uppercase amount; number amount; symbol amout")
-        print("Temperature 	- 1: temperature e.g., 45F, 102c, etc.")
-        print("Clipboard	- 1: history amount")
-        print("Currency		- 2: from currency e.g., UDS, EUR, etc.; to currency e.g., USD, EUR, etc.")
-        print("Time\t\t\t- 3: orginal time YYYY-MM-DD HH:MM:SS; "
+        print("Password\t- 4: lowercase amount; uppercase amount; number amount; symbol amout")
+        print("Temperature\t- 1: temperature e.g., 45F, 102c, etc.")
+        print("Clipboard\t- 1: history amount")
+        print("Currency\t- 2: from currency e.g., UDS, EUR, etc.; to currency e.g., USD, EUR, etc.")
+        print("Time\t\t- 3: orginal time YYYY-MM-DD HH:MM:SS; "
               "source time e.g., US/Eastern; "
               "target time e.g., Asia/Tokyo")
 
