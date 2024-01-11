@@ -38,7 +38,7 @@ def main():
 
     history = ClipboardHistory()
     print('\x1b[11;30;42m'
-          "Monitoring clipboard... Press Ctrl+C to stop and show history."
+          "Monitoring clipboard... Press Ctrl+C to stop and show history"
         '\x1b[0m')
 
     start_time = time.time()
