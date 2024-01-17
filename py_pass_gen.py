@@ -64,7 +64,7 @@ def main():
     print("\n\x1b[31mRandom generated password is:\x1b[0m")
     # can switch between formatted password or nonformatted password to display
     # print(random_password)
-    print('\x1b[11;30;42m' + random_password + '\x1b[0m''\n')
+    print('\x1b[11;30;42m' + random_password + '\x1b[0m\n')
 
 # main
 
