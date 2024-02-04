@@ -6,16 +6,9 @@ import qrcode
 def generate_wifi_qr(ssid, encryption_type, password):
     """function to generate qr code."""
     wifi_info = f"WIFI:S:{ssid};T:{encryption_type};P:{password};;"
-    qr = qrcode.QRCode(
-        version=1,
-        error_correction=qrcode.constants.ERROR_CORRECT_L,
-        box_size=10,
-        border=4,
-    )
-    qr.add_data(wifi_info)
-    qr.make(fit=True)
 
-    img = qr.make_image(fill_color="black", back_color="white")
+    img = qrcode.make(wifi_info)
+
     img.save("wifi_qr.png")
 
 def main():
