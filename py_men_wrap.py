@@ -2,7 +2,6 @@
 # JDD 12/2023
 
 import os
-import sys
 import platform
 
 def run_program(script_filename):
