@@ -36,6 +36,7 @@ def main():
         for key, (display_name, _) in programs.items():
             print(f"{key}. {display_name}")
         print("0. Exit\x1b[0m")
+        print("\u001b[33mNeeded modules: pyperclip, pytz, qrcode\x1b[0m")
         print("\x1b[34m\nCommand line arguments cheat sheet:")
         print("Password\t- 4: lowercase amount; uppercase amount; number amount; symbol amout")
         print("Temperature\t- 1: temperature e.g., 45F, 102c, etc.")
