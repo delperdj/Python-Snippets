@@ -2,14 +2,22 @@
 # JDD 12/2023
 
 import os
+import sys
+import platform
 
 def run_program(script_filename):
     """menu wrapper program to call other python programs."""
+    # Determine the Python command based on the operating system
+    python_command = "python" if platform.system() == "Windows" else "python3"
+
+    # Ask the user for any additional command-line arguments
     args = input(
         f"Enter command line arguments for {script_filename} "
         "(or press enter to run without arguments): "
     )
-    os.system(f'python {script_filename}.py {args}')
+    
+    # Execute the script with the determined Python command and user-provided arguments
+    os.system(f'{python_command} {script_filename}.py {args}')
 
 def main():
     """main is the Main."""
@@ -21,7 +29,7 @@ def main():
         "3": ("Clipboard History", "py_clip_hist"),
         "4": ("Currency Conversion", "py_curr_conv"),
         "5": ("Time Zone Conversion", "py_time_zone"),
-        "6": ("WiFi QR Code Generator", "py_wifi_qr.py")
+        "6": ("WiFi QR Code Generator", "py_wifi_qr")
     }
 
     while True:
