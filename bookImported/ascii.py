@@ -1,6 +1,7 @@
 # Ascii
 
 
+# pip install Pillow
 from PIL import Image
 
 def image_to_ascii(image_path, output_width=100):
