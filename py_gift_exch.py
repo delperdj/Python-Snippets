@@ -14,6 +14,18 @@ def main():
     givers = participants[:]
     receivers = participants[:]
 
+    # Define restricted pairs
+    restricted_pairs = {
+        ("Amy", "Jeff"),
+        ("Jeff", "Amy"),
+        ("Larry", "Julie"),
+        ("Julie", "Larry"),
+        ("Holli", "Brad"),
+        ("Brad", "Holli"),
+        ("Darin", "Angi"),
+        ("Angi", "Darin")
+    }
+
     # Ensure no one receives their own gift and no giver receives from the person they are giving to
     valid = False
     while not valid:
